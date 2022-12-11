@@ -1,0 +1,12 @@
+ ------ --------------------------------------------------------------------- 
+  [32mLine[39m   [32maccounts.php[39m                                                         
+ ------ --------------------------------------------------------------------- 
+  126    Class TransferDetails extends unknown class AccountTxn.              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols   
+ ------ --------------------------------------------------------------------- 
+
+
+[37;41m                                                                                                                        [39;49m
+[37;41m [ERROR] Found 1 error                                                                                                  [39;49m
+[37;41m                                                                                                                        [39;49m
+
