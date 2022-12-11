@@ -60,6 +60,44 @@ Created by <strong><span style="background-color:#e67e22">Kanagaraj Chinnadurai<
 
 <p>&nbsp;</p>
 
+<p><span style="font-size:11pt"><span style="font-family:Arial"><span style="color:#000000">Uploaded my files into Github</span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Arial"><span style="color:#000000"><strong>Github Link: </strong></span></span></span><a href="https://github.com/kanait84/Financial-transactions-system.git" style="text-decoration:none"><span style="font-size:11pt"><span style="font-family:Arial"><span style="color:#1155cc"><u>https://github.com/kanait84/Financial-transactions-system.git</u></span></span></span></a></p>
+
+<p><a href="https://github.com/kanait84/Financial-transactions-system/blob/main/src/accounts.php" style="text-decoration:none"><span style="font-size:11pt"><span style="font-family:Arial"><span style="color:#1155cc"><u>https://github.com/kanait84/Financial-transactions-system/blob/main/src/accounts.php</u></span></span></span></a></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124"><strong>SOLID Principles</strong></span></span></span></p>
+
+<ul>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">S: Single-responsibility principle.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">O: Open-closed principle.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">L: Liskov substitution principle.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">I: Interface segregation principle.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">D: Dependency Inversion Principle.</span></span></span></li>
+</ul>
+
+<p><br />
+<br />
+&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124"><strong>These were the 9 GRASP principles:</strong></span></span></span></p>
+
+<ul>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">Information expert.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">Creator.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">Low coupling.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">Protected variations.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">Indirection.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">Polymorphism.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">High cohesion.</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">Pure fabrication</span></span></span></li>
+	<li style="list-style-type:disc"><span style="font-size:12pt"><span style="font-family:Arial"><span style="color:#202124">Controller</span></span></span></li>
+</ul>
+
+<p>&nbsp;</p>
+
 <p><span style="font-size:13.999999999999998pt"><span style="font-family:Arial"><span style="color:#000000"><strong>Code Checkers</strong></span></span></span><span style="font-size:18pt"><span style="font-family:Arial"><span style="color:#000000"> </span></span></span><span style="font-size:11pt"><span style="font-family:Arial"><span style="color:#000000">(</span></span></span><span style="font-size:13.999999999999998pt"><span style="font-family:Calibri,sans-serif"><span style="color:#000000"><strong>phpstan, phpcs analyzers</strong></span></span></span><span style="font-size:18pt"><span style="font-family:Calibri,sans-serif"><span style="color:#000000"><strong>)</strong></span></span></span></p>
 
 <ul>
