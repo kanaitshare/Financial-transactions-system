@@ -144,7 +144,608 @@ Created by <strong><span style="background-color:#e67e22">Kanagaraj Chinnadurai<
 <p><br />
 &nbsp;</p>
 
-<p><span style="font-size:18pt"><span style="font-family:Arial"><span style="color:#000000"><strong>RUN the code in php</strong></span></span></span></p>
+<p><span style="font-size:18pt"><span style="font-family:Arial"><span style="color:#000000"><strong>RUN the code in php</strong></span></span></span><br />
+&nbsp;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>class <strong>Accounts </strong>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public $balance = 0;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $name=&#39;Bob&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $date;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>protected $accounts = [];</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $client;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $numMoney = 0;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $debt;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $data;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $account_name;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $account_number;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $acc_type=&#39;Savings&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $acc_balance= 0;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $customerId;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $bank_name=&#39;ABBC Bank&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $country=&#39;UAE&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public function __construct($client, $name)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>//Initialize the constructor data</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;client = $client;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;name = $name;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>// get all accounts in the system</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public function getAllAccounts()</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>//Fetch the relevant data and get the array format result</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;accounts = [</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>[&#39;account_name&#39; =&gt; &#39;Ram&#39;, &#39;account_number&#39; =&gt; &#39;45678765&#39;, &#39;account_type&#39; =&gt; $this-&gt;acc_type,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&#39;account_balance&#39; =&gt; 100,&#39;date_created&#39; =&gt; date(&#39;Y-m-d H:i:s&#39;)],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>[&#39;account_name&#39; =&gt; &#39;Bene&#39;, &#39;account_number&#39; =&gt; &#39;98765432&#39;, &#39;account_type&#39; =&gt; $this-&gt;acc_type,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&#39;account_balance&#39; =&gt; 300, &#39;date_created&#39; =&gt; date(&#39;Y-m-d H:i:s&#39;)],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>[&#39;account_name&#39; =&gt; &#39;Hemz&#39;, &#39;account_number&#39; =&gt; &#39;5456765&#39;, &#39;account_type&#39; =&gt; $this-&gt;acc_type,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&#39;account_balance&#39; =&gt; 500, &#39;date_created&#39; =&gt; date(&#39;Y-m-d H:i:s&#39;)]</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>];</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>//return the data as an json array</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return json_encode($this-&gt;accounts);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>//Fetch the relevant data and get the array format result</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public function getBalance($account_number): string {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>foreach($this-&gt;accounts as $val){</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>if($val[&#39;account_number&#39;] == $account_number){</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;balance = $val[&#39;account_balance&#39;];</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>if(($this-&gt;balance) &gt; 0){</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return &#39;Current Balance: &#39;.$this -&gt; balance.&quot;&lt;br /&gt;&quot;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>} else if(($this-&gt;balance) &lt;= 0 ){</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return &#39;Balance is empty &lt;br /&gt;&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}else{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return &#39;error&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>//Deposit of a specific account</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public function Deposit($account_number, $amount)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>echo &#39;Balance after Deposit of the account_number (&#39;.$account_number.&#39;) is : &#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;balance = $this-&gt;balance + $amount;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>echo $this-&gt;balance.&quot;&lt;br /&gt;&quot;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>//Withdraw of a specific account</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public function Withdraw($account_number, $amount)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>if(($this-&gt;balance) &lt; $amount){</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>echo &#39;Not enough funds to withdraw. &lt;br /&gt;&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>} else{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;balance = $this-&gt;balance - $amount;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>echo &#39;Balance after Withdrawal of the account_number (&#39;.$account_number.&#39;) is : &#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>echo $this-&gt;balance.&quot;&lt;br /&gt;&quot;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>class <strong>AccountTransaction</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $accNo;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $type;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $duedate;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $amount;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $comment;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $numMoneyAfter;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $allAccTxn = [];</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public function __construct($accNo, $type, $duedate, $amount, $comment, $numMoneyAfter)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>//Initialize the constructor data</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;accNo = $accNo;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;type = $type;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;duedate = $duedate;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;amount = $amount;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;comment = $comment;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;numMoneyAfter = $numMoneyAfter;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>// get all transactions for specific account</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public function getAccTxn($accNo)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;allAccTxn = [</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>[&#39;accNo&#39; =&gt; $accNo, &#39;type&#39; =&gt; &#39;xxxx&#39;, &#39;numMoneyAfter&#39; =&gt; 75, &#39;comment&#39; =&gt; &#39;comment5&#39;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&#39;amount&#39; =&gt; 300,&#39;duedate&#39; =&gt; date(&#39;2022-11-08 15:26:25&#39;)],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>[&#39;accNo&#39; =&gt; $accNo, &#39;type&#39; =&gt; &#39;xxxx&#39;, &#39;numMoneyAfter&#39; =&gt; 12, &#39;comment&#39; =&gt; &#39;comment1&#39;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&#39;amount&#39; =&gt; 500,&#39;duedate&#39; =&gt; date(&#39;2022-10-01 15:26:25&#39;)],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>[&#39;accNo&#39; =&gt; $accNo, &#39;type&#39; =&gt; &#39;xxxx&#39;, &#39;numMoneyAfter&#39; =&gt; 89, &#39;comment&#39; =&gt; &#39;comment3&#39;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&#39;amount&#39; =&gt; 700,&#39;duedate&#39; =&gt; date(&#39;2022-11-10 15:26:25&#39;)]</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>];</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return json_encode($this-&gt;allAccTxn);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>class <strong>TransferDetails </strong>extends <strong>AccountTransaction</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $title;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $sender;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $beneficiary;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>private $allTxn = [];</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public function __construct($type, $title, $duedate, $amount, $numMoneyAfter, $sender, $beneficiary)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>//Initialize the constructor data</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;title = $title;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;sender = $sender;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;beneficiary = $beneficiary;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>// get all transactions for all accounts</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>public function getTxnDetails()</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$this-&gt;allTxn = [</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>[&#39;account_type&#39; =&gt; &#39;type1&#39;, &#39;title&#39; =&gt; &#39;test title1&#39;, &#39;duedate&#39; =&gt; date(&#39;2022-08-12&#39;), &#39;amount&#39; =&gt; 200,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&#39;numMoneyAfter&#39; =&gt; 700, &#39;sender&#39; =&gt; &#39;sender1&#39;, &#39;beneficiary&#39; =&gt; &#39;Bob&#39;],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>[&#39;account_type&#39; =&gt; &#39;type2&#39;, &#39;title&#39; =&gt; &#39;test title3&#39;, &#39;duedate&#39; =&gt; date(&#39;2022-09-10&#39;), &#39;amount&#39; =&gt; 100,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&#39;numMoneyAfter&#39; =&gt; 900, &#39;sender&#39; =&gt; &#39;sender3&#39;, &#39;beneficiary&#39; =&gt; &#39;John&#39;],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>[&#39;account_type&#39; =&gt; &#39;type3&#39;, &#39;title&#39; =&gt; &#39;test title2&#39;, &#39;duedate&#39; =&gt; date(&#39;2022-10-02&#39;), &#39;amount&#39; =&gt; 300,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&#39;numMoneyAfter&#39; =&gt; 800, &#39;sender&#39; =&gt; &#39;sender2&#39;, &#39;beneficiary&#39; =&gt; &#39;Bene&#39;]</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>];</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return json_encode($this-&gt;allTxn);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+	</tbody>
+</table>
 
 <p>&nbsp;</p>
 
